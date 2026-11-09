@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Futures Community Trust | Get Involved</title>
+    
+    
+    <link rel="stylesheet" href="styles.css">
+
+    </head>
+<body>
+<header>
+<div class="container nav-wrap">
+<a class="logo" href="index.html">Bright <span>Futures</span> Trust</a>
+<button class="hamburger" aria-label="Menu">MENU</button>
+<nav><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="programmes.html">Programmes</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="enquiry.html" class="active">Get Involved</a></li>
+<li><a href="contact.html">Contact / Donate</a></li>
+</ul></nav>
+</div>
+</header>
+<section class="hero-small"><div class="container"><h1>Get Involved</h1><p>Volunteer your time, donate, or ask about our programmes.</p></div></section>
+<section><div class="container grid-2">
+<div><h2>Ways to Help</h2><div class="card"><h3>Become a Volunteer Tutor</h3><p>We need Maths, English and Science tutors. Minimum 2 hours per week. Training provided by our team. University students welcome.</p></div><div class="card"><h3>Donate Books or Supplies</h3><p>We accept school books, stationery, uniforms and educational toys at 12th Avenue Community Hall.</p></div><div class="card"><h3>Corporate Partnership</h3><p>Partner with us for CSI, feeding scheme support or infrastructure upgrade. Tax certificate provided.</p></div></div>
+<div class="card"><h2>Enquiry Form</h2><form id="enquiryForm" novalidate>
+<div><label for="fullName">Full Name *</label><input type="text" id="fullName" name="fullName" placeholder="e.g. Thabo Molefe" required></div>
+<div><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="e.g. thabo@email.com" required></div>
+<div><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="e.g. 082 123 4567"></div>
+<div><label for="interest">I am interested in *</label><select id="interest" name="interest" required><option value="">-- Select --</option><option value="volunteer">Volunteer Tutoring</option><option value="donate">Donating Money or Supplies</option><option value="parent">Enrolling My Child</option><option value="partnership">Corporate Partnership</option><option value="other">Other</option></select></div>
+<div><label for="message">Your Message *</label><textarea id="message" name="message" rows="5" placeholder="Tell us how you want to help or what you need" required></textarea></div>
+<div><button type="submit" class="btn btn-primary">Send Enquiry</button></div>
+<div id="formFeedback" class="form-feedback"></div>
+</form></div>
+</div></section>
+<footer><div class="container"><p>&copy; 2026 Bright Futures Community Trust | brightfuturestrust.org.za</p></div></footer>
+<script src="script.js"></script>
+</body>
+</html>

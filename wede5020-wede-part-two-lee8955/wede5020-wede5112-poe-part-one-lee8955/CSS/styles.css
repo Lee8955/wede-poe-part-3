@@ -1,0 +1,247 @@
+
+/*-- 2.1 External Stylesheet - linked to all pages via CSS/styles.css --*/
+/*--2.2 Base Style + CSS Reset --*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/*-- 2.3 Typography - scale, weight, line-height, letter-spacing --*/
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #0a3d62;
+    margin-bottom: 0.8em;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e5f8a;
+    margin: 1em 0 0.5em 0;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+/*-- 2.4 Layout Structure - Flexbox + Grid + relative units --*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a3d62;
+    padding: 1.5rem 5%;
+    text-align: center;
+}
+
+header p {
+    color: #f6b93b;
+    font-size: 1.1rem;
+    margin-top: 0.3em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+    list-style: none;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.6em 1.2em;
+    background-color: #1e5f8a;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/*-- 2.5 Visual Styles + Pseudo-classes --*/
+nav a:hover {
+    background-color: #f6b93b;
+    color: #0a3d62;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+nav a:focus {
+    outline: 3px solid #f6b93b;
+    outline-offset: 2px;
+}
+
+nav a:active {
+    background-color: #082f4a;
+    transform: scale(0.98);
+}
+
+/*-- Main grid layout --*/
+main {
+    display: grid;
+    grid-template-areas: "main-content";
+    grid-template-columns: 100%;
+    max-width: 1100px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 10px;
+}
+
+/*-- For programmes overview - 3 columns to 1 column responsive --*/
+#programmes-overview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2em 0;
+}
+
+#programmes-overview h2 {
+    grid-column: 1 / -1;
+}
+
+#programmes-overview article {
+    background-color: #eef5fb;
+    padding: 1.5em;
+    border-radius: 8px;
+    border: 1px solid #d6e6f5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/*-- Team grid --*/
+#team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+#team h3 {
+    grid-column: 1 / -1;
+}
+
+/*-- 3.2 Relative units + 3.3 Responsive Images --*/
+img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1em auto;
+}
+
+.hero-img {
+    max-width: 600px;
+}
+
+/*-- Buttons --*/
+.btn, main a[href*=".html"] {
+    display: inline-block;
+    padding: 0.7em 1.4em;
+    background-color: #0a3d62;
+    color: white   ;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0.3em;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #f6b93b;
+    color: #0a3d62;
+}
+
+/*-- Forms --*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+input, textarea, select {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #0a3d62;
+    box-shadow: 0 0 5px rgba(10,61,98,0.3);
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.8em;
+    text-align: left;
+}
+
+th {
+    background-color: #0a3d62;
+    color: white;
+}
+
+footer {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 2rem 5%;
+    margin-top: 3rem;
+}
+
+footer nav ul {
+    margin-top: 1em;
+}
+
+footer nav a {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+
+
+
+
